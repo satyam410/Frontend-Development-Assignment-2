@@ -1,0 +1,198 @@
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black ;
+}
+body{
+    background:url(./img/bg.jpg);
+    background-size: cover;
+    background-position :center;
+}
+    
+.btn{
+    background:#1698f1;
+    text-decoration: none;
+    padding: 0.5rem 1.3rem;
+    color: black;
+    border: 0;
+    justify-content: center;
+    text-align: center;  
+    box-shadow: 0 1px 5px white;
+}
+.btn:hover{
+    color: white;
+    background:#f24792;
+    box-shadow: 0 1px 5px;
+}
+
+img{
+    max-width: 100%;
+}
+.container{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.main ul{
+    display: grid;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4 ,1fr);
+}
+.main a{
+    background:black ;
+    opacity: 0.8;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    text-align: center;
+    font-family: Brush Script MT,
+        Brush Script Std,
+        cursive;
+    color:white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: 0 1px 5px ;
+}
+.main a:hover{
+    background: #f24792;
+    color: white;
+}
+.top-container{
+    display: grid;
+    gap: 20px;
+    column-gap: 100px;
+    grid-template-areas: 
+    'showcase showcase showcase showcase top-box-a'
+    'showcase showcase showcase showcase top-box-b';
+}
+.showcase{
+    grid-area: showcase;
+    background: url(./img/Burger.jpg);
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    box-shadow:0 1px 5px ;
+}
+.showcase h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: white;
+}
+.showcase p{
+    padding-top:20px;
+    font-size: 1rem;
+  line-height: 2rem;
+    margin-bottom: 0;
+    color: white;
+}
+.top-box{
+    background:black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 5px black;
+    padding: 1.5rem;
+    
+}
+.top-box .price{
+    font-size: 2.5rem;
+    text-align: center; 
+}
+
+.top-box-a{
+    grid-area: top-box-a;
+    color: white;
+    opacity: 0.8;
+}
+.top-box-b {
+    grid-area: top-box-b;
+    color: white;
+    opacity: 0.8;
+}
+.boxes img{
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow:0 1px 5px ;
+    
+}
+.boxes{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+    gap: 30px;
+    
+}
+.box{
+    background:black;
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px black;
+}
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.header{
+  margin-top:50px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 1px 5px black;
+  background:black;
+  opacity: 0.8;
+
+}
+.portfolio img {
+  width: 100%;
+  box-shadow: 0 1px 5px black;
+}
+footer {
+  margin-top: 2rem;
+  background:black ;
+  color:white ;
+  text-align: center;
+  padding: 1rem;
+}
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    grid-template-areas:
+      'showcase'
+      'top-box-a'
+      'top-box-b';
+  }
+}
